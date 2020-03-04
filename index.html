@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试</title>
+    <style type="text/css">
+        html {
+            font-size: 2px;
+            overflow-y: scroll
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ededed;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1024px;
+            height: 600rem;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20rem;
+        }
+        
+        @media screen and (max-width:768px) {
+            .container {
+                width: 100%;
+                height: 100rem;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                margin-top: 0px;
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            .container {
+                width: 100%;
+                height: 100rem;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                margin-top: 0px;
+            }
+        }
+        
+        .header {
+            background-color: white;
+            height: 25rem;
+            width: 100%;
+        }
+        
+        .search-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40rem;
+        }
+        
+        .search-layout {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .search-tab {
+            width: 192rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+        
+        .search-tab span {
+            font-size: 8rem;
+        }
+        
+        .search-form {
+            margin-top: 8rem;
+        }
+        
+        input {
+            outline-style: none;
+            border: 0px;
+        }
+        
+        .search-form input[type=search] {
+            max-width: 470px;
+            width: 200rem;
+            background: #f5f5f5;
+            overflow: hidden;
+            height: 20rem;
+            font-size: 8rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+        
+        .submit {
+            background: #484848;
+            width: 60rem;
+            height: 20rem;
+            margin-left: 10rem;
+            color: white;
+            font-size: 9rem;
+        }
+        
+        .works {
+            width: 100%;
+            height: 300rem;
+            margin-top: 30rem;
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .works-tab {
+            width: 300rem;
+            height: 15rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20rem;
+        }
+        
+        .works-tab span {
+            font-size: 8rem;
+        }
+        
+        #works-list {
+            width: 70%;
+            margin-top: 10rem;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class=header></div>
+        <div class="search-container">
+            <div class="search-layout">
+                <div class="search-tab">
+                    <span>百度</span>
+                    <span>Google</span>
+                    <span>搜狗</span>
+                    <span>好搜</span>
+                    <span>图片</span>
+                    <span>学术</span>
+                </div>
+                <form class="search-form" target="_blank">
+                    <input class="float-left search-keyword" type=search autocomplete=off autofocus placeholder="百度一下">
+                    <input class="submit" type=submit value=搜索>
+                </form>
+            </div>
+        </div>
+        <div class='works'>
+            <div class="works-tab">
+                <span>常用</span>
+                <span>技术</span>
+                <span>学习</span>
+                <span>新闻</span>
+                <span>生活</span>
+                <span>设计</span>
+            </div>
+            <div id=works-list>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var data = [{
+            'tag': '技术',
+            name: 'GitHub',
+            link: 'https://github.com'
+        }, {
+            'tag': '技术',
+            name: 'Node官网',
+            link: 'https://nodejs.org/en/'
+        }, {
+            'tag': '技术',
+            name: 'Node社区',
+            link: 'http://nodejs.cn/'
+        }, {
+            'tag': '技术',
+            name: 'VUEX',
+            link: 'http://nodejs.cn/'
+        }, {
+            'tag': '技术',
+            name: 'Coding',
+            link: 'http://nodejs.cn/'
+        }]
+        var list = document.getElementById('works-list');
+        var div = document.createElement('div');
+        div.style.width = '100%'
+        div.style.display = 'flex';
+        div.style['flex-direction'] = 'row';
+        div.style['justify-content'] = 'space-between'
+        data.forEach(function(item) {
+            var a = document.createElement('a');
+            a.style['font-size'] = '7rem';
+            a.style['color'] = '#484848';
+            a.target = "_blank";
+            a.innerHTML = item.name;
+            a.href = item.link;
+            div.appendChild(a);
+        });
+        list.appendChild(div);
+    </script>
+
+</body>
+
+</html>
