@@ -17,7 +17,13 @@
         }
         
         a {
+            color: #484848;
             text-decoration: none;
+        }
+        
+        a:hover {
+            color: white;
+            background-color: #484848;
         }
         
         .container {
@@ -28,28 +34,6 @@
             display: flex;
             flex-direction: column;
             margin-top: 20rem;
-        }
-        
-        @media screen and (max-width:768px) {
-            .container {
-                width: 100%;
-                height: 100rem;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-                margin-top: 0px;
-            }
-        }
-        
-        @media screen and (max-width:480px) {
-            .container {
-                width: 100%;
-                height: 100rem;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-                margin-top: 0px;
-            }
         }
         
         .header {
@@ -72,20 +56,34 @@
         }
         
         .search-tab {
-            width: 192rem;
+            width: 200rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding-left: 4rem;
-            padding-right: 4rem;
+            border-bottom: 1px solid #e9e9e9;
         }
         
         .search-tab span {
             font-size: 8rem;
+            border-bottom: 2px solid transparent;
+            color: #A9A9A9;
+            cursor: pointer;
+            height: 15rem;
+            padding: 0 3rem;
+        }
+        
+        .search-tab span:hover {
+            border-bottom: 2px solid #484848;
+            color: #484848;
+        }
+        
+        #baidu {
+            border-bottom: 2px solid #484848;
+            color: #484848;
         }
         
         .search-form {
-            margin-top: 8rem;
+            margin-top: 6rem;
         }
         
         input {
@@ -125,7 +123,6 @@
         
         .works-tab {
             width: 300rem;
-            height: 15rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -134,11 +131,23 @@
         
         .works-tab span {
             font-size: 8rem;
+            padding: 3rem 6rem;
+        }
+        
+        .works-tab span:hover {
+            color: white;
+            background-color: #484848;
+            cursor: pointer;
         }
         
         #works-list {
-            width: 70%;
+            width: 330rem;
             margin-top: 10rem;
+        }
+        
+        .normal {
+            color: white;
+            background-color: #484848;
         }
     </style>
 
@@ -152,28 +161,28 @@
         <div class=header></div>
         <div class="search-container">
             <div class="search-layout">
-                <div class="search-tab">
-                    <span>百度</span>
-                    <span>Google</span>
-                    <span>搜狗</span>
-                    <span>好搜</span>
-                    <span>图片</span>
-                    <span>学术</span>
+                <div class="search-tab" id='search-tab'>
+                    <span id='baidu' onclick='searchTabClick(this)'>百度</span>
+                    <span id='google' onclick='searchTabClick(this)'>Google</span>
+                    <span id='sougou' onclick='searchTabClick(this)'>搜狗</span>
+                    <span id='haosou' onclick='searchTabClick(this)'>好搜</span>
+                    <span id='img' onclick='searchTabClick(this)'>图片</span>
+                    <span id='study' onclick='searchTabClick(this)'>学术</span>
                 </div>
-                <form class="search-form" target="_blank">
+                <form class="search-form" id='search-form' target="_blank">
                     <input class="float-left search-keyword" type=search autocomplete=off autofocus placeholder="百度一下">
                     <input class="submit" type=submit value=搜索>
                 </form>
             </div>
         </div>
         <div class='works'>
-            <div class="works-tab">
-                <span>常用</span>
-                <span>技术</span>
-                <span>学习</span>
-                <span>新闻</span>
-                <span>生活</span>
-                <span>设计</span>
+            <div class="works-tab" id='works-tab'>
+                <span class='normal' onclick='worksTabClick(this)'>常用</span>
+                <span onclick='worksTabClick(this)'>技术</span>
+                <span onclick='worksTabClick(this)'>学习 </span>
+                <span onclick='worksTabClick(this)'>新闻</span>
+                <span onclick='worksTabClick(this)'>生活</span>
+                <span onclick='worksTabClick(this)'>设计</span>
             </div>
             <div id=works-list>
 
@@ -183,7 +192,7 @@
     </div>
 
     <script type="text/javascript">
-        var data = [{
+        let data = [{
             'tag': '技术',
             name: 'GitHub',
             link: 'https://github.com'
@@ -193,33 +202,78 @@
             link: 'https://nodejs.org/en/'
         }, {
             'tag': '技术',
-            name: 'Node社区',
+            name: 'Node中文网',
             link: 'http://nodejs.cn/'
         }, {
             'tag': '技术',
-            name: 'VUEX',
-            link: 'http://nodejs.cn/'
+            name: 'CNode社区',
+            link: 'https://cnodejs.org/'
         }, {
             'tag': '技术',
             name: 'Coding',
             link: 'http://nodejs.cn/'
         }]
-        var list = document.getElementById('works-list');
-        var div = document.createElement('div');
+
+        let actions = {
+            'baidu': 'https://www.baidu.com/s',
+            'google': 'https://www.google.com/search',
+            'sougou': 'https://www.sogou.com/web',
+            'haosou': 'https://www.so.com/s',
+        }
+
+        let form = document.getElementById('search-form');
+
+        let list = document.getElementById('works-list');
+        let div = document.createElement('div');
         div.style.width = '100%'
         div.style.display = 'flex';
         div.style['flex-direction'] = 'row';
         div.style['justify-content'] = 'space-between'
         data.forEach(function(item) {
-            var a = document.createElement('a');
+            let a = document.createElement('a');
             a.style['font-size'] = '7rem';
-            a.style['color'] = '#484848';
+            a.style['padding'] = '3rem 4rem ';
             a.target = "_blank";
             a.innerHTML = item.name;
             a.href = item.link;
             div.appendChild(a);
         });
         list.appendChild(div);
+
+        function searchTabClick(element) {
+            console.log(element.id);
+            resetSearchTab();
+            element.style.color = '#484848';
+            element.style['border-bottom'] = '2px solid #484848';
+
+            form.action = actions[element.id];
+        }
+
+        function resetSearchTab() {
+            let searchTab = document.getElementById('search-tab');
+            let spans = searchTab.getElementsByTagName('span');
+            for (let x = 0; x < spans.length; x++) {
+                span = spans[x];
+                span.style.color = '#A9A9A9';
+                span.style['border-bottom'] = '2px solid transparent';
+            }
+        }
+
+        function worksTabClick(element) {
+            resetWorksTab();
+            element.style.color = 'white';
+            element.style.background = '#484848';
+        }
+
+        function resetWorksTab() {
+            let searchTab = document.getElementById('works-tab');
+            let spans = searchTab.getElementsByTagName('span');
+            for (let x = 0; x < spans.length; x++) {
+                span = spans[x];
+                span.style.color = '#484848';
+                span.style.background = '#F8F8F8';
+            }
+        }
     </script>
 
 </body>
