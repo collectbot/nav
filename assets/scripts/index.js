@@ -75,6 +75,32 @@ data.forEach(function(item) {
 });
 list.appendChild(div);
 
+list.appendChild(createDiv());
+list.appendChild(createDiv());
+list.appendChild(createDiv());
+list.appendChild(createDiv());
+
+
+function createDiv() {
+    let div = document.createElement('div');
+    div.style.width = '100%'
+    div.style.display = 'flex';
+    div.style['flex-direction'] = 'row';
+    div.style['justify-content'] = 'space-between'
+    data.forEach(function(item) {
+        let a = document.createElement('a');
+        a.style['font-size'] = '7rem';
+        a.style['padding'] = '3rem 4rem ';
+        a.target = "_blank";
+        a.innerHTML = item.name;
+        a.href = item.link;
+        div.appendChild(a);
+    });
+    return div;
+}
+
+
+
 function searchTabClick(element) {
     console.log(element.id);
     resetSearchTab();
