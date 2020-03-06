@@ -1,34 +1,35 @@
 let data = [{
-    'tag': '技术',
-    name: 'GitHub',
-    link: 'https://github.com'
-}, {
-    'tag': '技术',
-    name: 'Node官网',
-    link: 'https://nodejs.org/en/'
-}, {
-    'tag': '技术',
-    name: 'Node中文网',
-    link: 'http://nodejs.cn/'
-}, {
-    'tag': '技术',
-    name: 'CNode社区',
-    link: 'https://cnodejs.org/'
-}, {
-    'tag': '技术',
-    name: 'Coding',
-    link: 'http://nodejs.cn/'
-},
-{
-    'tag': '技术',
-    name: 'Gitlab',
-    link: 'http://nodejs.cn/'
-},
-{
-    'tag': '技术',
-    name: 'Vue',
-    link: 'http://nodejs.cn/'
-}]
+        'tag': '技术',
+        name: 'GitHub',
+        link: 'https://github.com'
+    }, {
+        'tag': '技术',
+        name: 'Node官网',
+        link: 'https://nodejs.org/en/'
+    }, {
+        'tag': '技术',
+        name: 'Node中文网',
+        link: 'http://nodejs.cn/'
+    }, {
+        'tag': '技术',
+        name: 'CNode社区',
+        link: 'https://cnodejs.org/'
+    }, {
+        'tag': '技术',
+        name: 'Coding',
+        link: 'http://nodejs.cn/'
+    },
+    {
+        'tag': '技术',
+        name: 'Gitlab',
+        link: 'http://nodejs.cn/'
+    },
+    {
+        'tag': '技术',
+        name: 'Vue',
+        link: 'http://nodejs.cn/'
+    }
+]
 
 let actions = {
     'baidu': {
@@ -44,7 +45,7 @@ let actions = {
     'magi': {
         'href': 'https://magi.com/search',
         'name': 'q',
-        'placeholder': 'Magi 搜索'
+        'placeholder': 'Mag[i] 搜索'
     },
     'sougou': {
         'href': 'https://www.sogou.com/web',
@@ -68,27 +69,23 @@ let actions = {
 let form = document.getElementById('search-form');
 let keyword = document.getElementById('keyword');
 
-let list = document.getElementById('works-list');
-let div = document.createElement('div');
-div.style.width = '100%'
-div.style.display = 'flex';
-div.style['flex-direction'] = 'row';
-div.style['justify-content'] = 'space-between';
+// let list = document.getElementById('works-list');
+// let div = document.createElement('div');
+// div.style.width = '100%'
+// div.style.display = 'flex';
+// div.style['flex-direction'] = 'row';
+// div.style['justify-content'] = 'space-between';
 
-data.forEach(function (item) {
-    let a = document.createElement('a');
-    a.style['font-size'] = '7rem';
-    a.style['padding'] = '3rem 4rem ';
-    a.target = "_blank";
-    a.innerHTML = item.name;
-    a.href = item.link;
-    div.appendChild(a);
-});
-list.appendChild(div);
-list.appendChild(createDiv());
-list.appendChild(createDiv());
-list.appendChild(createDiv());
-list.appendChild(createDiv());
+// data.forEach(function(item) {
+//     let a = document.createElement('a');
+//     a.style['font-size'] = '7rem';
+//     a.style['padding'] = '3rem 4rem ';
+//     a.target = "_blank";
+//     a.innerHTML = item.name;
+//     a.href = item.link;
+//     div.appendChild(a);
+// });
+// list.appendChild(div);
 
 
 function createDiv() {
@@ -98,7 +95,7 @@ function createDiv() {
     div.style['margin-top'] = '5rem';
     div.style['flex-direction'] = 'row';
     div.style['justify-content'] = 'space-between'
-    data.forEach(function (item) {
+    data.forEach(function(item) {
         let a = document.createElement('a');
         a.style['font-size'] = '7rem';
         a.style['padding'] = '3rem 4rem ';
@@ -121,7 +118,6 @@ function createLine() {
 
 
 function searchTabClick(element) {
-    console.log(element.id);
     resetSearchTab();
     element.style.color = '#484848';
     element.style['border-bottom'] = '2px solid #484848';
