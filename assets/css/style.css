@@ -1,14 +1,4 @@
-@keyframes loading {
-    to {
-        -webkit-transform: rotate(360deg)
-    }
-}
 
-@-webkit-keyframes loading {
-    to {
-        transform: rotate(360deg)
-    }
-}
 
 html {
     font-size: 2px;
@@ -22,6 +12,21 @@ body {
     background: #ededed;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
     color: #666;
+}
+
+.head{
+    width: 100%;
+    height: 20rem;
+    background: #484848;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.head span{
+    color: white;
+    font-size: 8rem;
+    margin-left: 10rem;
 }
 
 a {
@@ -41,13 +46,6 @@ a:hover {
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin-top: 20rem;
-}
-
-.header {
-    background-color: white;
-    height: 25rem;
-    width: 100%;
 }
 
 .search-container {
@@ -64,7 +62,7 @@ a:hover {
 }
 
 .search-tab {
-    width: 200rem;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,7 +89,7 @@ a:hover {
 }
 
 .search-form {
-    margin-top: 6rem;
+    margin-top: 8rem;
 }
 
 input {
@@ -121,11 +119,17 @@ input {
     font-size: 9rem;
 }
 
+.line{
+    width: 100%;
+    height:1rem;
+    background: #ededed;
+    margin-top: 20rem;
+}
 .works {
     width: 100%;
     height: 300rem;
-    margin-top: 30rem;
-    background-color: #F8F8F8;
+    margin-top: 20rem;
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
