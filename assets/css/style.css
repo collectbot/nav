@@ -14,7 +14,7 @@ body {
 
 .head {
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     background: #484848;
     display: flex;
     flex-direction: row;
@@ -51,7 +51,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60rem;
+    margin-top: 30rem;
 }
 
 .search-layout {
@@ -121,7 +121,7 @@ input {
     width: 100%;
     height: 1rem;
     background: #ededed;
-    margin-top: 50rem;
+    margin-top: 30rem;
 }
 
 .works {
@@ -167,16 +167,21 @@ input {
 
 .works-list li {
     width: 12.5%;
-    padding: 5;
     display: inline-block;
     white-space: nowrap;
     justify-content: center;
     overflow: hidden;
     font-size: 8rem;
-    text-align: center
+    text-align: center;
 }
 
-.works-list li:hover {
+.works-list a {
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+
+.works-list a:hover {
     color: white;
     background-color: #484848;
     cursor: pointer;
@@ -186,3 +191,13 @@ input {
     color: #999;
     background-color: white;
 }
+
+
+
+ul {
+    width: auto;
+    line-height: 32px;
+    list-style: none;
+    overflow: hidden;
+}
+

@@ -7,11 +7,30 @@
     <meta content="width=device-width,initial-scale=1,maximum-scale=1" name=viewport>
     <meta content=jsthon name=author>
     <link href="assets/css/style.css" rel=stylesheet>
+    <style type="text/css">
+        .listUl {
+            width: auto;
+            line-height: 32px;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .listLi {
+            width: 12.5%;
+            padding: 5;
+            display: inline-block;
+            white-space: nowrap;
+            justify-content: center;
+            overflow: hidden;
+            font-size: 8rem;
+            text-align: center
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="head"><span>ZDZN</span></div>
+        <div class="head"><span>ZDZN.NET</span></div>
         <div class="search-container">
             <div class="search-layout">
                 <div class="search-tab" id='search-tab'>
@@ -22,8 +41,9 @@
                     <span id='so' onclick='searchTabClick(this)'>360</span>
                     <span id='bing' onclick='searchTabClick(this)'>Bing</span>
                 </div>
-                <form class="search-form" id='search-form' target="_blank">
-                    <input class="search-keyword" id='keyword' type=search autocomplete=off autofocus placeholder="百度一下">
+                <form class="search-form" id='search-form' target="_blank" action="https://www.baidu.com/s">
+                    <input class="search-keyword" id='keyword' type=search autocomplete=off autofocus
+                        placeholder="百度一下，你就知道" name='word'>
                     <input class="submit" type=submit value=搜索>
                 </form>
             </div>
@@ -33,55 +53,64 @@
             <div class=works-list>
                 <ul>
                     <li>代码托管</li>
-                    <li>GitHub</li>
-                    <li>GitLab</li>
-                    <li>BitBucket</li>
-                    <li>Coding</li>
-                    <li>码云</li>
-                    <li>华为开源平台</li>
+                    <li><a target="_blank" href="https://github.com">GitHub</a></li>
+                    <li><a target="_blank" href="https://gitlab.com">GitLab</a></li>
+                    <li><a target="_blank" href="https://bitbucket.org/product">Bitbucket</a></li>
+                    <li><a target="_blank" href="https://coding.net">Coding</a></li>
+                    <li><a target="_blank" href="https://gitee.com">码云</a></li>
+                    <li><a target="_blank" href="https://code.opensource.huaweicloud.com">华为开源平台</a></li>
                 </ul>
                 <ul>
                     <li>技术社区</li>
-                    <li>Stackoverflow</li>
-                    <li>Segmentfault</li>
-                    <li>V2EX</li>
-                    <li>C语言中文网</li>
-                    <li>C语言网</li>
-                    <li>在线手册中心</li>
+                    <li><a target="_blank" href="https://stackoverflow.com/">StackOverflow</a></li>
+                    <li><a target="_blank" href="https://segmentfault.com/">SegmentFault</a></li>
+                    <li><a target="_blank" href="https://www.v2ex.com/">V2EX</a></li>
+                    <li><a target="_blank" href="https://juejin.im">掘金</a></li>
+                    <li><a target="_blank" href="https://cnodejs.org">CNode</a></li>
+                    <li><a target="_blank" href="https://www.vue-js.com">Vue中文社区</a></li>
                 </ul>
                 <ul>
                     <li>大厂开源</li>
-                    <li>阿里开源</li>
-                    <li>腾讯开源</li>
-                    <li>百度开源</li>
-                    <li>Google开源</li>
-                    <li>C语言网</li>
-                    <li>在线手册中心</li>
+                    <li><a target="_blank" href="https://opensource.alibaba.com/project">阿里开源</a></li>
+                    <li><a target="_blank" href="https://opensource.tencent.com/projects">腾讯开源</a></li>
+                    <li><a target="_blank" href="https://75team.com">奇虎360</a></li>
+                    <li><a target="_blank" href="https://didi.github.io">DiDi</a></li>
+                    <li><a target="_blank" href="https://tech.meituan.com/">美团</a></li>
+                    <li><a target="_blank" href="https://aotu.io/">京东</a></li>
                 </ul>
+
                 <ul>
                     <li>JavaScript</li>
-                    <li>MDN文档</li>
-                    <li>W3CSchool</li>
-                    <li>React</li>
-                    <li>Vue</li>
-                    <li>JQuery</li>
-                    <li>Angulur</li>
+                    <li><a target="_blank" href="https://developer.mozilla.org/zh-CN/">MDN中文文档</a></li>
+                    <li><a target="_blank" href="https://es6.ruanyifeng.com/">ES6入门教程</a></li>
+                    <li><a target="_blank" href="https://cn.vuejs.org/">Vue</a></li>
+                    <li><a target="_blank" href="https://react.docschina.org/">React</a></li>
+                    <li><a target="_blank" href="https://reactnative.cn/">React-Native</a></li>
+                    <li><a target="_blank" href="https://angular.cn/">Angular</a></li>
                 </ul>
                 <ul>
                     <li>Node.js</li>
-                    <li>Node官网</li>
-                    <li>Node中文网</li>
-                    <li>CNode社区</li>
-                    <li>Express</li>
-                    <li>Koa</li>
-                    <li>Egg</li>
+                    <li><a target="_blank" href="https://nodejs.org/en/">Node官网</a></li>
+                    <li><a target="_blank" href="http://nodejs.cn/">Node中文网</a></li>
+                    <li><a target="_blank" href="https://www.expressjs.com.cn/">Express</a></li>
+                    <li><a target="_blank" href="https://koa.bootcss.com/">Koa</a></li>
+                    <li><a target="_blank" href="https://eggjs.org/">Egg</a></li>
+                    <li><a target="_blank" href="https://docs.nestjs.cn">Nest</a></li>
+                </ul>
+                <ul>
+                    <li>云服务器</li>
+                    <li><a target="_blank" href="https://www.aliyun.com/">阿里云</a></li>
+                    <li><a target="_blank" href="https://cloud.tencent.com/">腾讯云</a></li>
+                    <li><a target="_blank" href=“https://cloud.baidu.com/">百度云</a></li>
+                    <li><a target="_blank" href="https://www.ksyun.com/">金山云</a></li>
+                    <li><a target="_blank" href="https://activity.huaweicloud.com/">华为云</a></li>
+                    <li><a target="_blank" href="https://www.amazonaws.cn/">AWS中国</a></li>
                 </ul>
             </div>
         </div>
 
     </div>
     <script type="text/javascript" src="assets/scripts/index.js"></script>
-
 </body>
 
 </html>

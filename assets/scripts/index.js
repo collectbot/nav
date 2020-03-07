@@ -1,35 +1,4 @@
-let data = [{
-        'tag': '技术',
-        name: 'GitHub',
-        link: 'https://github.com'
-    }, {
-        'tag': '技术',
-        name: 'Node官网',
-        link: 'https://nodejs.org/en/'
-    }, {
-        'tag': '技术',
-        name: 'Node中文网',
-        link: 'http://nodejs.cn/'
-    }, {
-        'tag': '技术',
-        name: 'CNode社区',
-        link: 'https://cnodejs.org/'
-    }, {
-        'tag': '技术',
-        name: 'Coding',
-        link: 'http://nodejs.cn/'
-    },
-    {
-        'tag': '技术',
-        name: 'Gitlab',
-        link: 'http://nodejs.cn/'
-    },
-    {
-        'tag': '技术',
-        name: 'Vue',
-        link: 'http://nodejs.cn/'
-    }
-]
+
 
 let actions = {
     'baidu': {
@@ -64,58 +33,8 @@ let actions = {
     }
 }
 
-
-
 let form = document.getElementById('search-form');
 let keyword = document.getElementById('keyword');
-
-// let list = document.getElementById('works-list');
-// let div = document.createElement('div');
-// div.style.width = '100%'
-// div.style.display = 'flex';
-// div.style['flex-direction'] = 'row';
-// div.style['justify-content'] = 'space-between';
-
-// data.forEach(function(item) {
-//     let a = document.createElement('a');
-//     a.style['font-size'] = '7rem';
-//     a.style['padding'] = '3rem 4rem ';
-//     a.target = "_blank";
-//     a.innerHTML = item.name;
-//     a.href = item.link;
-//     div.appendChild(a);
-// });
-// list.appendChild(div);
-
-
-function createDiv() {
-    let div = document.createElement('div');
-    div.style.width = '100%'
-    div.style.display = 'flex';
-    div.style['margin-top'] = '5rem';
-    div.style['flex-direction'] = 'row';
-    div.style['justify-content'] = 'space-between'
-    data.forEach(function(item) {
-        let a = document.createElement('a');
-        a.style['font-size'] = '7rem';
-        a.style['padding'] = '3rem 4rem ';
-        a.target = "_blank";
-        a.innerHTML = item.name;
-        a.href = item.link;
-        div.appendChild(a);
-    });
-    return div;
-}
-
-function createLine() {
-    let div = document.createElement('div');
-    div.style.width = '100%';
-    div.style.height = '1rem';
-    div.style.background = 'black';
-    return div;
-}
-
-
 
 function searchTabClick(element) {
     resetSearchTab();
@@ -137,18 +56,3 @@ function resetSearchTab() {
     }
 }
 
-function worksTabClick(element) {
-    resetWorksTab();
-    element.style.color = 'white';
-    element.style.background = '#484848';
-}
-
-function resetWorksTab() {
-    let searchTab = document.getElementById('works-tab');
-    let spans = searchTab.getElementsByTagName('span');
-    for (let x = 0; x < spans.length; x++) {
-        span = spans[x];
-        span.style.color = '#484848';
-        span.style.background = '#F8F8F8';
-    }
-}

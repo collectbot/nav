@@ -1,4 +1,4 @@
-const data = {
+const d = {
 
     //代码托管
     'github': 'https://github.com',
@@ -57,3 +57,45 @@ const data = {
     'mongo中文社区': 'http://mongoing.com/',
 
 }
+
+let data = [
+    {
+        'tag': 1,
+        'name': '代码托管',
+    },
+    {
+        'tag': 1,
+        'name': 'GitHub',
+        'url': 'https://github.com'
+    },
+    {
+        'tag': 1,
+        'name': 'GitLab',
+        'url': 'https://gitlab.com/'
+    },
+    {
+        'tag': 1,
+        'name': 'Coding',
+        'url': 'https://coding.net/'
+    },
+    {
+        'tag': 1,
+        'name': '码云',
+        'url': 'https://gitee.com'
+    },
+    {
+        'tag': 1,
+        'name': '华为开源平台',
+        'url': 'https://code.opensource.huaweicloud.com/'
+    },
+    {
+        'tag': 2,
+        'name': '技术社区',
+    },
+    {
+        'tag': 2,
+        'name': 'stackoverflow',
+        'url': 'https://stackoverflow.com/'
+    }
+
+]
