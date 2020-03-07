@@ -23,7 +23,7 @@ body {
 
 .head span {
     color: white;
-    font-size: 8rem;
+    font-size: 9rem;
     margin-left: 10rem;
 }
 
@@ -40,7 +40,7 @@ a:hover {
 .container {
     width: 90%;
     max-width: 1024px;
-    height: 600rem;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -52,6 +52,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     margin-top: 30rem;
+    margin-bottom: 30rem;
 }
 
 .search-layout {
@@ -121,7 +122,6 @@ input {
     width: 100%;
     height: 1rem;
     background: #ededed;
-    margin-top: 30rem;
 }
 
 .works {
@@ -193,3 +193,7 @@ input {
 }
 
 
+.footer{
+    width: 100%;
+    height: 70rem;
+}
