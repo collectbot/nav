@@ -127,35 +127,16 @@ input {
 .works {
     width: 100%;
     height: auto;
-    margin-top: 10rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15rem;
 }
 
-.works-tab {
-    width: 300rem;
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20rem;
-}
-
-.works-tab span {
-    font-size: 8rem;
-    padding: 3rem 6rem;
-}
-
-.works-tab span:hover {
-    color: white !important;
-    background-color: #484848 !important;
-    cursor: pointer;
-}
 
 .works-list {
     width: 100%;
-    margin-top: 10rem;
 }
 
 .works-list ul {
@@ -197,3 +178,4 @@ input {
     width: 100%;
     height: 70rem;
 }
+
