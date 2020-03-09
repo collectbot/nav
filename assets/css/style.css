@@ -14,7 +14,7 @@ body {
 
 .head {
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     background: #484848;
     display: flex;
     flex-direction: row;
@@ -23,7 +23,7 @@ body {
 
 .head span {
     color: white;
-    font-size: 8rem;
+    font-size: 9rem;
     margin-left: 10rem;
 }
 
@@ -40,7 +40,7 @@ a:hover {
 .container {
     width: 90%;
     max-width: 1024px;
-    height: 600rem;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60rem;
+    margin-top: 30rem;
+    margin-bottom: 30rem;
 }
 
 .search-layout {
@@ -121,41 +122,20 @@ input {
     width: 100%;
     height: 1rem;
     background: #ededed;
-    margin-top: 50rem;
 }
 
 .works {
     width: 100%;
     height: auto;
-    margin-top: 10rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.works-tab {
-    width: 300rem;
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20rem;
-}
-
-.works-tab span {
-    font-size: 8rem;
-    padding: 3rem 6rem;
-}
-
-.works-tab span:hover {
-    color: white !important;
-    background-color: #484848 !important;
-    cursor: pointer;
+    margin-top: 15rem;
 }
 
 .works-list {
     width: 100%;
-    margin-top: 10rem;
 }
 
 .works-list ul {
@@ -167,16 +147,21 @@ input {
 
 .works-list li {
     width: 12.5%;
-    padding: 5;
     display: inline-block;
     white-space: nowrap;
     justify-content: center;
     overflow: hidden;
     font-size: 8rem;
-    text-align: center
+    text-align: center;
 }
 
-.works-list li:hover {
+.works-list a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.works-list a:hover {
     color: white;
     background-color: #484848;
     cursor: pointer;
@@ -186,4 +171,14 @@ input {
     color: #999;
     background-color: white;
     cursor: default;
+}
+
+.body {
+    width: 100%;
+    height: 200rem
+}
+
+.footer {
+    width: 100%;
+    height: 70rem;
 }
