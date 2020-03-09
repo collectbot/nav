@@ -56,4 +56,15 @@ const data = {
     'mongodb官网': 'https://www.mongodb.com/',
     'mongo中文社区': 'http://mongoing.com/',
 
+    // python
+    // java
+    // android
+    // ios
+    // c
+    // c++
+    // c#
+    // unity3d
+    // cocos
+    // golong
+    // shell
 }
