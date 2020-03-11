@@ -56,9 +56,6 @@ const d = {
     'mongo中文社区': 'http://mongoing.com/',
 
     // python
-    // java
-    // android
-    // ios
     // c
     // c++
     // c#
