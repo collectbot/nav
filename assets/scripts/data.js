@@ -42,7 +42,6 @@ const d = {
 
 
     'MDN中文文档': 'https://developer.mozilla.org/zh-CN/',
-    'w3cschool': 'https://www.w3school.com.cn/',
 
 
     'Redis中文官方网站': 'http://www.redis.cn/',
@@ -56,7 +55,6 @@ const d = {
     'mongodb官网': 'https://www.mongodb.com/',
     'mongo中文社区': 'http://mongoing.com/',
 
-<<<<<<< HEAD
     // python
     // java
     // android
@@ -69,11 +67,9 @@ const d = {
     // golong
     // shell
 }
-=======
-}
 
-let data = [
-    {
+
+let data = [{
         'tag': 1,
         'name': '代码托管',
     },
@@ -113,4 +109,3 @@ let data = [
     }
 
 ]
->>>>>>> c5ce007f643a755817b70354c0f6732082ec53e7
