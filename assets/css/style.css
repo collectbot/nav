@@ -11,7 +11,6 @@
 }
 
 html {
-    font-size: 2px;
     overflow-y: scroll
 }
 
@@ -26,7 +25,7 @@ body {
 
 .head {
     width: 100%;
-    height: 25rem;
+    height: 50px;
     background: #484848;
     display: flex;
     flex-direction: row;
@@ -35,8 +34,8 @@ body {
 
 .head span {
     color: white;
-    font-size: 9rem;
-    margin-left: 10rem;
+    font-size: 18px;
+    margin-left: 20px;
 }
 
 a {
@@ -63,8 +62,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30rem;
-    margin-bottom: 30rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .search-layout {
@@ -73,7 +72,7 @@ a:hover {
 }
 
 .search-tab {
-    width: 235rem;
+    width: 470px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -82,12 +81,12 @@ a:hover {
 }
 
 .search-tab span {
-    font-size: 9rem;
+    font-size: 18px;
     border-bottom: 2px solid transparent;
     color: #A9A9A9;
     cursor: pointer;
-    height: 15rem;
-    padding: 0 3rem;
+    height: 30px;
+    padding: 0 6px;
 }
 
 .search-tab span:hover {
@@ -101,7 +100,7 @@ a:hover {
 }
 
 .search-form {
-    margin-top: 8rem;
+    margin-top: 16px;
 }
 
 input {
@@ -113,27 +112,27 @@ input {
 
 .search-form input[type=search] {
     max-width: 470px;
-    width: 250rem;
+    width: 500px;
     background: #f5f5f5;
     overflow: hidden;
-    height: 20rem;
-    font-size: 8rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .submit {
     background: #484848;
-    width: 60rem;
-    height: 20rem;
-    margin-left: 10rem;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
     color: white;
-    font-size: 9rem;
+    font-size: 18px;
 }
 
 .line {
     width: 100%;
-    height: 1rem;
+    height: 2px;
     background: #ededed;
 }
 
@@ -144,7 +143,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15rem;
+    margin-top: 30px;
 }
 
 .works-list {
@@ -164,7 +163,7 @@ input {
     white-space: nowrap;
     justify-content: center;
     overflow: hidden;
-    font-size: 8rem;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -188,10 +187,10 @@ input {
 
 .body {
     width: 100%;
-    height: 200rem
+    height: 400px
 }
 
 .footer {
     width: 100%;
-    height: 70rem;
+    height: 140px;
 }
