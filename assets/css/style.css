@@ -127,7 +127,7 @@ input:-ms-input-placeholder {
     width: 79%;
     background: #f5f5f5;
     overflow: hidden;
-    height: 45px;
+    height: 40px;
     font-size: 16px;
     padding-left: 8px;
     padding-right: 8px;
@@ -136,7 +136,7 @@ input:-ms-input-placeholder {
 .submit {
     background: #3c4150;
     width: 20%;
-    height: 45px;
+    height: 40px;
     color: white;
     font-size: 18px;
 }
