@@ -375,4 +375,8 @@ input:-ms-input-placeholder {
         padding-inline-start: 5px;
         padding-inline-end: 5px;
     }
+    ul:-webkit-padding-start {
+        padding-inline-start: 5px;
+        padding-inline-end: 5px;
+    }
 }
