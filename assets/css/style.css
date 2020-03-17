@@ -149,8 +149,8 @@ input:-ms-input-placeholder {
 
 .line {
     width: 100%;
-    height: 2px;
-    background: #ededed;
+    height: 1px;
+    background: #a5a5a5;
 }
 
 .works {
@@ -313,7 +313,7 @@ input:-ms-input-placeholder {
     .line {
         width: 100%;
         height: 1px;
-        background: #ededed;
+        background: #a5a5a5;
     }
     .search-tab span {
         font-size: 16px;
