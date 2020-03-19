@@ -55,6 +55,10 @@ h2 {
     background: #a5a5a5;
 }
 
+p {
+    margin-left: 20px;
+}
+
 @media screen and (max-width:480px) {
     .title {
         width: 100%;
@@ -67,6 +71,9 @@ h2 {
     }
     h2 {
         margin-top: 20px;
+        margin-left: 0px;
+    }
+    p {
         margin-left: 0px;
     }
 }
