@@ -207,7 +207,7 @@ input:-ms-input-placeholder {
     background-color: #3c4150;
     margin-top: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -215,6 +215,12 @@ input:-ms-input-placeholder {
 .footer span {
     color: white;
     font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer a {
+    color: white;
 }
 
 @media screen and (max-width:1024px) {
