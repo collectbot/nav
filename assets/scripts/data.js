@@ -58,6 +58,8 @@ const d = {
     'IBM Developer': 'https://www.ibm.com/developerworks/cn/',
     'Microsoft Docs': 'https://docs.microsoft.com/zh-cn/',
     'Nginx': 'https://www.nginx.cn/doc/',
+    '淘小铺': 'http://www.taoxp.com/#yaoqing',
+
     // c
     // c++
     // c#
