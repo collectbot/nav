@@ -1,5 +1,3 @@
-
-
 let actions = {
     'baidu': {
         'href': 'https://www.baidu.com/s',
@@ -56,3 +54,19 @@ function resetSearchTab() {
     }
 }
 
+let worklist = document.getElementsByClassName('works-list')[0];
+console.log(worklist);
+let ulArr = worklist.getElementsByTagName('ul');
+for (let x = 0; x < ulArr.length; x++) {
+    let liArr = ulArr[x].getElementsByTagName('li');
+    for (let y = 0; y < liArr.length; y++) {
+        let a = liArr[y].getElementsByTagName('a')[0];
+        if (a !== undefined) {
+            a.addEventListener('click', click);
+        }
+    }
+}
+
+function click() {
+    console.log(this.text);
+}
