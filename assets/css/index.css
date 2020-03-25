@@ -95,7 +95,9 @@ a:hover {
 input {
     outline-style: none;
     border: 0px;
+    border-radius:0; 
     -webkit-appearance: none;
+    -webkit-border-radius:0px;
     opacity: 1;
     vertical-align: middle;
 }
