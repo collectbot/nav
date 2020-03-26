@@ -60,6 +60,8 @@ const d = {
     'Nginx': 'https://www.nginx.cn/doc/',
     '淘小铺': 'http://www.taoxp.com/#yaoqing',
 
+    '':'https://hao.shejidaren.com/',
+
     // c
     // c++
     // c#
